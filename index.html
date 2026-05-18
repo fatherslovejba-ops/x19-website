@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X19 | Quiet Power Art Brand</title>
+  <meta name="description" content="X19 is an original art character brand born between emotion, fashion, and quiet rebellion. Quiet is another kind of power." />
+  <meta property="og:title" content="X19 | Quiet Power Art Brand" />
+  <meta property="og:description" content="Not everyone is made to be liked. Some are born to be themselves." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root {
+      --wine: #6f1623;
+      --deep-wine: #2a070d;
+      --tomato: #a7352d;
+      --cream: #f2eadf;
+      --paper: #e7d8c7;
+      --black: #12100f;
+      --gray: #756b65;
+      --gold: #b8905a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(167, 53, 45, 0.25), transparent 28%),
+        radial-gradient(circle at 85% 10%, rgba(111, 22, 35, 0.35), transparent 30%),
+        linear-gradient(135deg, #1a080b 0%, #120c0c 45%, #2a070d 100%);
+      color: var(--cream);
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mix-blend-mode: overlay;
+      opacity: .38;
+      z-index: 0;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      background: rgba(18, 10, 12, 0.72);
+      border-bottom: 1px solid rgba(242, 234, 223, 0.12);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      letter-spacing: .12em;
+      font-weight: 800;
+    }
+
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(242, 234, 223, .5);
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--wine), #1a080b 70%);
+      box-shadow: 0 0 30px rgba(167, 53, 45, .45);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      color: rgba(242, 234, 223, .78);
+      font-size: 14px;
+      letter-spacing: .04em;
+    }
+
+    .nav-links a:hover { color: #fff; }
+
+    .hero {
+      min-height: calc(100vh - 74px);
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 56px;
+      padding: 78px 0 64px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      color: var(--paper);
+      font-size: 13px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 44px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1 {
+      font-size: clamp(54px, 9vw, 120px);
+      line-height: .88;
+      letter-spacing: -.06em;
+      margin-bottom: 24px;
+    }
+
+    .hero h2 {
+      font-size: clamp(25px, 4vw, 48px);
+      line-height: 1.22;
+      margin-bottom: 24px;
+      font-weight: 500;
+      color: var(--cream);
+      letter-spacing: -.035em;
+    }
+
+    .hero p {
+      max-width: 620px;
+      color: rgba(242, 234, 223, .78);
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(242, 234, 223, .32);
+      transition: .25s ease;
+      font-size: 15px;
+    }
+
+    .btn.primary {
+      background: var(--cream);
+      color: var(--deep-wine);
+      border-color: var(--cream);
+      font-weight: 700;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(0,0,0,.28);
+    }
+
+    .art-card {
+      position: relative;
+      min-height: 620px;
+      border-radius: 34px;
+      overflow: hidden;
+      background:
+        linear-gradient(160deg, rgba(242,234,223,.12), rgba(111,22,35,.38)),
+        radial-gradient(circle at 45% 30%, rgba(242,234,223,.16), transparent 30%),
+        #1b1110;
+      border: 1px solid rgba(242, 234, 223, .14);
+      box-shadow: 0 34px 90px rgba(0,0,0,.45);
+    }
+
+    .art-card::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(242, 234, 223, .18);
+      border-radius: 26px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .xgirl {
+      position: absolute;
+      left: 50%;
+      bottom: 52px;
+      transform: translateX(-50%);
+      width: min(360px, 74%);
+      aspect-ratio: 3/4;
+      border-radius: 48% 48% 34% 34%;
+      background:
+        radial-gradient(circle at 42% 24%, #f3ddc8 0 8%, transparent 9%),
+        radial-gradient(circle at 58% 24%, #f3ddc8 0 8%, transparent 9%),
+        linear-gradient(#e6c3a8 0 30%, #1b0c0f 31% 100%);
+      box-shadow: inset 0 -30px 80px rgba(111,22,35,.45), 0 20px 70px rgba(0,0,0,.5);
+      filter: contrast(1.04) saturate(.88);
+    }
+
+    .xgirl::before {
+      content: "XX";
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: Arial, sans-serif;
+      font-size: 56px;
+      letter-spacing: -6px;
+      color: #111;
+      font-weight: 900;
+      z-index: 2;
+    }
+
+    .xgirl::after {
+      content: "";
+      position: absolute;
+      top: 8%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 82%;
+      height: 38%;
+      border-radius: 54% 54% 45% 45%;
+      background: linear-gradient(135deg, #8d2528, #3d0b13 80%);
+      box-shadow: inset 14px 0 24px rgba(255,255,255,.08);
+      z-index: 1;
+    }
+
+    .art-label {
+      position: absolute;
+      left: 36px;
+      bottom: 34px;
+      z-index: 3;
+      color: rgba(242,234,223,.78);
+      font-size: 13px;
+      letter-spacing: .12em;
+    }
+
+    .section {
+      padding: 94px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-title {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 36px;
+      align-items: end;
+      margin-bottom: 44px;
+    }
+
+    .section-title h3 {
+      font-size: clamp(34px, 5vw, 68px);
+      line-height: 1;
+      letter-spacing: -.04em;
+    }
+
+    .section-title p {
+      color: rgba(242,234,223,.72);
+      font-size: 17px;
+      max-width: 680px;
+    }
+
+    .panel {
+      background: rgba(242, 234, 223, .08);
+      border: 1px solid rgba(242, 234, 223, .14);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: 0 24px 70px rgba(0,0,0,.25);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .story-card h4,
+    .product-card h4 {
+      color: #fff;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .story-card p,
+    .product-card p {
+      color: rgba(242,234,223,.68);
+      font-size: 15.5px;
+    }
+
+    .quote {
+      margin-top: 22px;
+      padding: 38px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(111,22,35,.65), rgba(18,16,15,.45));
+      border: 1px solid rgba(242,234,223,.14);
+      font-size: clamp(25px, 4vw, 48px);
+      line-height: 1.35;
+      letter-spacing: -.04em;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .product-card {
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background:
+        linear-gradient(to top, rgba(18,16,15,.88), transparent),
+        radial-gradient(circle at 40% 20%, rgba(242,234,223,.16), transparent 34%),
+        rgba(242,234,223,.08);
+      border: 1px solid rgba(242,234,223,.13);
+      border-radius: 26px;
+      padding: 24px;
+      transition: .25s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      background-color: rgba(111,22,35,.25);
+    }
+
+    .logo-card {
+      justify-content: center;
+      align-items: center;
+      min-height: 320px;
+    }
+
+    .logo-card img {
+      max-width: 180px;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    .manifesto {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .manifesto-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .line {
+      padding: 18px 20px;
+      border-left: 3px solid var(--gold);
+      background: rgba(242,234,223,.07);
+      border-radius: 0 18px 18px 0;
+      color: rgba(242,234,223,.82);
+    }
+
+    .visual-block {
+      min-height: 480px;
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(242,234,223,.18), transparent 30%),
+        linear-gradient(155deg, rgba(167,53,45,.55), rgba(18,16,15,.2)),
+        #241111;
+      border: 1px solid rgba(242,234,223,.14);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .visual-block::after {
+      content: "X19";
+      position: absolute;
+      bottom: -42px;
+      right: -10px;
+      font-size: 150px;
+      letter-spacing: -.08em;
+      color: rgba(242,234,223,.08);
+    }
+
+    .contact {
+      text-align: center;
+      padding: 96px 24px;
+      border-radius: 38px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(167,53,45,.38), transparent 36%),
+        rgba(242,234,223,.08);
+      border: 1px solid rgba(242,234,223,.14);
+    }
+
+    .contact h3 {
+      font-size: clamp(36px, 6vw, 76px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+      letter-spacing: -.05em;
+    }
+
+    .contact p {
+      color: rgba(242,234,223,.72);
+      max-width: 680px;
+      margin: 0 auto 30px;
+      font-size: 17px;
+    }
+
+    footer {
+      padding: 38px 0;
+      color: rgba(242,234,223,.5);
+      font-size: 13px;
+      border-top: 1px solid rgba(242,234,223,.1);
+    }
+
+    @media (max-width: 860px) {
+      .nav-links { display: none; }
+      .hero,
+      .section-title,
+      .manifesto { grid-template-columns: 1fr; }
+      .hero { padding-top: 48px; }
+      .art-card { min-height: 520px; }
+      .story-grid,
+      .products { grid-template-columns: 1fr; }
+      .section { padding: 66px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#top" class="logo" aria-label="X19 Home">
+        <span class="logo-mark">X</span>
+        <span>X19</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#story">Story</a>
+        <a href="#logo">Logo</a>
+        <a href="#character">Character</a>
+        <a href="#collection">Collection</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="container hero">
+      <div>
+        <div class="eyebrow">Quiet Power Art Brand</div>
+        <h1>X19</h1>
+        <h2>Not everyone is made to be liked.<br />Some are born to be themselves.</h2>
+        <p>
+          X19 is an original art character brand born between emotion, fashion, and quiet rebellion.
+          She is quiet, sensitive, and stubborn — yet she always sees what others overlook.
+          Quiet is not weakness. Quiet is another kind of power.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="#story">Enter X19</a>
+          <a class="btn" href="#collection">View Collection</a>
+        </div>
+      </div>
+
+      <div class="art-card" aria-label="X19 Girl visual artwork">
+        <div class="xgirl"></div>
+        <div class="art-label">X19 GIRL / ORIGINAL CHARACTER</div>
+      </div>
+    </section>
+
+    <section id="story" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h3>Brand Story</h3>
+          <p>
+            X19 is more than a character image. It is a world built from emotion, companionship,
+            independence, and art. She exists for those who may not fit in, but still choose to become themselves.
+          </p>
+        </div>
+
+        <div class="story-grid">
+          <div class="panel story-card">
+            <h4>01 | Quiet</h4>
+            <p>She may not be the loudest in the room, but she has her own rhythm. Quiet is how she protects herself.</p>
+          </div>
+          <div class="panel story-card">
+            <h4>02 | Sensitive</h4>
+            <p>She feels the subtle shifts. She sees the wounds and light that others often miss.</p>
+          </div>
+          <div class="panel story-card">
+            <h4>03 | Herself</h4>
+            <p>She does not exist to please everyone. Her purpose is to remind you that you can become yourself.</p>
+          </div>
+        </div>
+
+        <div class="quote">
+          Some people love the noise.<br />Some people choose the quiet.<br />Her name is X19 Girl.
+        </div>
+      </div>
+    </section>
+
+    <section id="logo" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h3>X19 Logo System</h3>
+          <p>
+            The X19 logo system, character marks, and visual identity are built into one consistent world:
+            wine red, warm ivory, painterly texture, and quiet high-end art direction.
+          </p>
+        </div>
+
+        <div class="products">
+          <div class="product-card logo-card">
+            <img src="images/logo-main.png" alt="X19 Main Logo" />
+          </div>
+          <div class="product-card logo-card">
+            <img src="images/logo-symbol.png" alt="X19 Symbol Logo" />
+          </div>
+          <div class="product-card logo-card">
+            <img src="images/xgirl-logo.png" alt="X19 Girl Logo" />
+          </div>
+          <div class="product-card logo-card">
+            <img src="images/logo-mark.png" alt="X19 Brand Mark" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="character" class="section">
+      <div class="container manifesto">
+        <div>
+          <div class="eyebrow">Character Bible</div>
+          <div class="section-title" style="display:block;margin-bottom:28px;">
+            <h3>X19 Girl</h3>
+            <p style="margin-top:20px;">
+              Her core is simple: soft on the outside, sharp on the inside.
+              She can live as illustration, figure, fashion graphic, oil painting, IG series,
+              and the main character of the X19 universe.
+            </p>
+          </div>
+          <div class="manifesto-list">
+            <div class="line">She is not a bad girl. She simply refuses to be defined.</div>
+            <div class="line">She wears XX glasses and sees a world others cannot see.</div>
+            <div class="line">Her colors are wine red, warm ivory, black gray, and painterly texture.</div>
+            <div class="line">Her voice is quiet, sharp, honest, and slightly rebellious.</div>
+          </div>
+        </div>
+        <div class="visual-block"></div>
+      </div>
+    </section>
+
+    <section id="collection" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h3>Collection</h3>
+          <p>
+            X19 can grow into apparel, figures, art prints, bags, stickers, exhibitions, and social content.
+            Every product is not only made to look beautiful — it carries the emotion and story of the character.
+          </p>
+        </div>
+
+        <div class="products">
+          <div class="product-card">
+            <h4>Art Tee</h4>
+            <p>Flat character artwork, slogans, and limited editions made for T-shirts.</p>
+          </div>
+          <div class="product-card">
+            <h4>Figure</h4>
+            <p>Figure concepts for X19 Girl, family members, and the White Rabbit Army.</p>
+          </div>
+          <div class="product-card">
+            <h4>Poster</h4>
+            <p>High-end art posters with wine red, warm ivory, and painterly texture.</p>
+          </div>
+          <div class="product-card">
+            <h4>Story Goods</h4>
+            <p>Character quotes turned into stickers, cards, hang tags, and packaging details.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact">
+        <h3>Follow the quiet power.</h3>
+        <p>
+          X19 is building her world — from one painting and one character into an art brand that can be collected,
+          worn, and carried with you.
+        </p>
+        <div class="cta-row" style="justify-content:center;">
+          <a class="btn primary" href="https://www.instagram.com/x19.offical/" target="_blank" rel="noopener">Follow on Instagram</a>
+          <a class="btn" href="mailto:chang0976220604@gmail.com">Brand Collaboration</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 X19. Original Art Character Brand. All Rights Reserved.
+    </div>
+  </footer>
+</body>
+</html>
